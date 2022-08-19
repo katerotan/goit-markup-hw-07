@@ -1,0 +1,68 @@
+/*--ФОРМ ФИЛД ОБЩИЙ--*/
+
+.form-field {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/*--Отвечает за квадратик слева, а текст справа--*/
+
+.form-field:nth-of-type(5) {
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+/*ШРИФТЫ И РАЗМЕР ЛЕЙБЛА */
+.label-policy {
+  /*шрифты в лейбле*/
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0px;
+
+  color: #757575;
+}
+
+.label-policy a {
+  /*шрифты в лейбле, где ссылка*/
+  color: #2196f3;
+}
+
+/*------САМ ЧЕК БОКС ОТРАБАТЫВАЕМ----*/
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.label-policy {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+}
+
+.icon-icon-checked {
+  position: absolute;
+
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  visibility: hidden;
+}
+
+.checkbox:checked + .icon-icon-checked {
+  visibility: visible;
+}
+
+.checkbox:checked ~ .icon-icon-check {
+  visibility: hidden;
+}
