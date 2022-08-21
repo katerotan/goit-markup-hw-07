@@ -96,3 +96,50 @@
 .footer-email {
   display: flex;
 }
+
+/*---------------ФОРМЫ В ФУТЕРЕ--------------*/
+
+.footer-email {
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-email-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #ffffff;
+  margin: 0;
+
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.footer-email-input {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-email-input input {
+  padding: 15px 16px;
+  min-width: 358px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email-input input:hover {
+  border: 1px solid #2196f3;
+}

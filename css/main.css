@@ -30,6 +30,414 @@
   color: #2196f3;
 }
 
+/*---------------------БЕКДРОП----------*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 528px;
+  min-height: 581px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+.close-modal-btn:hover {
+  color: #2196f3;
+  cursor: pointer;
+}
+
+/*------------------Формы в модалке!!!!!!!!! Модуль 6---------------------*/
+.form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 40px 40px 40px;
+}
+
+.form-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #212121;
+}
+
+.form-field {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.form-field .label-name-tel-email-comm {
+  margin-bottom: 4px;
+}
+
+.form-field .form-input {
+  margin: 0;
+  padding: 13px 14px 13px 43px; /*задала отступ для того, чтобы помещалась s*/
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field .form-input:hover,
+.form-field .form-input:focus {
+  border: 1px solid #2196f3;
+}
+
+.form-field .label-name-tel-email-comm {
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+}
+
+textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea::-moz-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea:-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea::-ms-input-placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.comment {
+  padding: 12px 16px;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comment:hover {
+  border: 1px solid #2196f3;
+}
+
+.form-field:nth-of-type(4) {
+  margin-bottom: 20px;
+}
+
+/*--Кнопака--*/
+.form-input-btn-submit {
+  margin-top: 30px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #2196f3;
+  cursor: pointer;
+  display: inline-block; /*для кнопок баттон и ссылок-кнопок - обязательно*/
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  padding: 10px 52px;
+  border-width: 0px;
+  border-style: none;
+  text-align: center;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-btn-submit:hover,
+.form-input-btn-submit:focus {
+  background-color: #188ce8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*--SVG--*/
+.form-field:nth-of-type(1) {
+  position: relative;
+}
+
+.icon-name {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus ~ .icon-name,
+.form-input:hover ~ .icon-name,
+.icon-name:hover {
+  fill: #188ce8;
+}
+
+.form-field:nth-of-type(2) {
+  position: relative;
+}
+
+.icon-tel {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus ~ .icon-tel,
+.form-input:hover ~ .icon-tel,
+.icon-tel:hover {
+  fill: #188ce8;
+}
+
+.form-field:nth-of-type(3) {
+  position: relative;
+}
+
+.icon-mail {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 15px;
+  bottom: 14px;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus ~ .icon-mail,
+.form-input:hover ~ .icon-mail,
+.icon-mail:hover {
+  fill: #188ce8;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid #2196f3;
+}
+
+/*--Кнопака--*/
+.form-input-btn-email {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #2196f3;
+  cursor: pointer;
+  display: inline-block; /*для кнопок баттон и ссылок-кнопок - обязательно*/
+  min-width: 200px;
+  min-height: 50px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 13px 28px;
+  border-width: 0px;
+  border-style: none;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.test {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscribe {
+  display: block;
+  width: 110px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.icon-icon-send {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.form-input-btn-email:hover,
+.form-input-btn-email:focus {
+  background-color: #188ce8;
+}
+
+/*--ФОРМ ФИЛД ОБЩИЙ--*/
+.form-field {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+/*--Отвечает за квадратик слева, а текст справа--*/
+.form-field:nth-of-type(5) {
+  margin-bottom: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*ШРИФТЫ И РАЗМЕР ЛЕЙБЛА */
+.label-policy {
+  /*шрифты в лейбле*/
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0px;
+  color: #757575;
+}
+
+.label-policy a {
+  /*шрифты в лейбле, где ссылка*/
+  color: #2196f3;
+}
+
+/*------САМ ЧЕК БОКС ОТРАБАТЫВАЕМ----*/
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.label-policy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.icon-icon-check {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+}
+
+.icon-icon-checked {
+  position: absolute;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  visibility: hidden;
+}
+
+.checkbox:checked + .icon-icon-checked {
+  visibility: visible;
+}
+
+.checkbox:checked ~ .icon-icon-check {
+  visibility: hidden;
+}
+
 /*---------------------------------------------HEADER--------------------------------------------*/
 .header {
   background-color: #ffffff;
@@ -283,6 +691,55 @@
   display: flex;
 }
 
+/*---------------ФОРМЫ В ФУТЕРЕ--------------*/
+.footer-email {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-email-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.footer-email-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-email-input input {
+  padding: 15px 16px;
+  min-width: 358px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email-input input:hover {
+  border: 1px solid #2196f3;
+}
+
 body {
   font-family: "Roboto", "Times New Roman", sans-serif;
   color: #757575;
@@ -384,7 +841,6 @@ body {
 .section-specials-item {
   width: 270px;
 }
-
 .section-specials-item::before {
   content: "";
   display: block;
@@ -730,9 +1186,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.section-filters-btn-list-btn:hover,
-.section-filters-btn-list-btn:focus {
+.section-filters-btn-list-btn:hover, .section-filters-btn-list-btn:focus {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -811,9 +1265,7 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.section-portfolio-item-link:hover,
-.section-portfolio-item-link:focus {
+.section-portfolio-item-link:hover, .section-portfolio-item-link:focus {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -850,461 +1302,4 @@ body {
   line-height: 30px;
   margin-top: 4px;
   margin-bottom: 0;
-}
-
-/*---------------------БЕКДРОП----------*/
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 1;
-  -webkit-transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1), transform 1250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-.modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 528px;
-  min-height: 581px;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.close-modal-btn {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #000000;
-  background-color: #ffffff;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-close {
-  fill: currentColor;
-  width: 20px;
-  height: 20px;
-}
-
-.close-modal-btn:hover {
-  color: #2196f3;
-  cursor: pointer;
-}
-
-/*------------------Формы в модалке!!!!!!!!! Модуль 6---------------------*/
-.form {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px 40px 40px 40px;
-}
-
-.form-title {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 12px;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  color: #212121;
-}
-
-.form-field {
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: left;
-}
-
-.form-field .label-name-tel-email-comm {
-  margin-bottom: 4px;
-}
-
-.form-field .form-input {
-  margin: 0;
-  padding: 13px 14px 13px 43px; /*задала отступ для того, чтобы помещалась s*/
-  width: 100%;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field .form-input:hover,
-.form-field .form-input:focus {
-  border: 1px solid #2196f3;
-}
-
-.form-field .label-name-tel-email-comm {
-  font-size: 12px;
-  line-height: 14px;
-  color: #757575;
-}
-
-textarea::-webkit-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea::-moz-placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea:-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea::-ms-input-placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea::placeholder {
-  font-size: 12px;
-  line-height: 14px;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.comment {
-  padding: 12px 16px;
-  resize: none;
-  width: 448px;
-  height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.comment:hover {
-  border: 1px solid #2196f3;
-}
-
-.form-field:nth-of-type(4) {
-  margin-bottom: 20px;
-}
-
-/*--Кнопака--*/
-.form-input-btn-submit {
-  margin-top: 30px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  color: #ffffff;
-  background-color: #2196f3;
-  cursor: pointer;
-  display: inline-block; /*для кнопок баттон и ссылок-кнопок - обязательно*/
-  min-width: 200px;
-  height: 50px;
-  border-radius: 4px;
-  padding: 10px 52px;
-  border-width: 0px;
-  border-style: none;
-  text-align: center;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input-btn-submit:hover,
-.form-input-btn-submit:focus {
-  background-color: #188ce8;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-/*---------------В ФУТЕРЕ--------------*/
-.footer-email {
-  margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.footer-email-title {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 16.41px;
-  color: #ffffff;
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 0;
-}
-
-.footer-email-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
-}
-
-.footer-email-input input {
-  padding: 15px 16px;
-  min-width: 358px;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: transparent;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-email-input input:hover {
-  border: 1px solid #2196f3;
-}
-
-/*--SVG--*/
-.form-field:nth-of-type(1) {
-  position: relative;
-}
-
-.icon-name {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 15px;
-  bottom: 14px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus ~ .icon-name,
-.form-input:hover ~ .icon-name,
-.icon-name:hover {
-  fill: #188ce8;
-}
-
-.form-field:nth-of-type(2) {
-  position: relative;
-}
-
-.icon-tel {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 15px;
-  bottom: 14px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus ~ .icon-tel,
-.form-input:hover ~ .icon-tel,
-.icon-tel:hover {
-  fill: #188ce8;
-}
-
-.form-field:nth-of-type(3) {
-  position: relative;
-}
-
-.icon-mail {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 15px;
-  bottom: 14px;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus ~ .icon-mail,
-.form-input:hover ~ .icon-mail,
-.icon-mail:hover {
-  fill: #188ce8;
-}
-
-input:focus-visible,
-textarea:focus-visible {
-  outline: 1px solid #2196f3;
-}
-
-/*--Кнопака--*/
-.form-input-btn-email {
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  color: #ffffff;
-  background-color: #2196f3;
-  cursor: pointer;
-  display: inline-block; /*для кнопок баттон и ссылок-кнопок - обязательно*/
-  min-width: 200px;
-  min-height: 50px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 13px 28px;
-  border-width: 0px;
-  border-style: none;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.test {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.subscribe {
-  display: block;
-  width: 110px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.icon-icon-send {
-  display: block;
-  width: 24px;
-  height: 24px;
-}
-
-.form-input-btn-email:hover,
-.form-input-btn-email:focus {
-  background-color: #188ce8;
-}
-
-/*--ФОРМ ФИЛД ОБЩИЙ--*/
-.form-field {
-  margin-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: left;
-}
-
-/*--Отвечает за квадратик слева, а текст справа--*/
-.form-field:nth-of-type(5) {
-  margin-bottom: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/*ШРИФТЫ И РАЗМЕР ЛЕЙБЛА */
-.label-policy {
-  /*шрифты в лейбле*/
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0px;
-  color: #757575;
-}
-
-.label-policy a {
-  /*шрифты в лейбле, где ссылка*/
-  color: #2196f3;
-}
-
-/*------САМ ЧЕК БОКС ОТРАБАТЫВАЕМ----*/
-.checkbox {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.label-policy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
-
-.icon-icon-check {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 9px;
-}
-
-.icon-icon-checked {
-  position: absolute;
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 9px;
-  visibility: hidden;
-}
-
-.checkbox:checked + .icon-icon-checked {
-  visibility: visible;
-}
-
-.checkbox:checked ~ .icon-icon-check {
-  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */
