@@ -55,16 +55,16 @@
   background-color: #ffffff;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #2196f3;
+    cursor: pointer;
+  }
 }
 .btn-close {
   fill: currentColor;
   width: 20px;
   height: 20px;
-}
-
-.close-modal-btn:hover {
-  color: #2196f3;
-  cursor: pointer;
 }
 
 /*------------------Формы в модалке!!!!!!!!! Модуль 6---------------------*/
@@ -88,11 +88,33 @@
   color: #212121;
 }
 
+/*--ФОРМ ФИЛД ОБЩИЙ--*/
+
 .form-field {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   text-align: left;
+
+  &:nth-of-type(4) {
+    margin-bottom: 20px;
+  }
+  &:nth-of-type(1) {
+    position: relative;
+  }
+  &:nth-of-type(2) {
+    position: relative;
+  }
+
+  &:nth-of-type(3) {
+    position: relative;
+  }
+
+  /*--Отвечает за квадратик слева, а текст справа--*/
+  &:nth-of-type(5) {
+    margin-bottom: 0px;
+    align-items: center;
+  }
 }
 
 .form-field .label-name-tel-email-comm {
@@ -138,14 +160,10 @@ textarea::placeholder {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.comment:hover {
-  border: 1px solid #2196f3;
-}
-
-.form-field:nth-of-type(4) {
-  margin-bottom: 20px;
+  &:hover {
+    border: 1px solid #2196f3;
+  }
 }
 
 /*--Кнопака--*/
@@ -174,19 +192,15 @@ textarea::placeholder {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-input-btn-submit:hover,
-.form-input-btn-submit:focus {
-  background-color: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
 
 /*--SVG--*/
-
-.form-field:nth-of-type(1) {
-  position: relative;
-}
 
 .icon-name {
   width: 18px;
@@ -195,15 +209,12 @@ textarea::placeholder {
   left: 15px;
   bottom: 14px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-input:focus ~ .icon-name,
-.form-input:hover ~ .icon-name,
-.icon-name:hover {
-  fill: #188ce8;
-}
 
-.form-field:nth-of-type(2) {
-  position: relative;
+  .form-input:focus ~ &,
+  .form-input:hover ~ &,
+  &:hover {
+    fill: #188ce8;
+  }
 }
 
 .icon-tel {
@@ -213,16 +224,12 @@ textarea::placeholder {
   left: 15px;
   bottom: 14px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-input:focus ~ .icon-tel,
-.form-input:hover ~ .icon-tel,
-.icon-tel:hover {
-  fill: #188ce8;
-}
-
-.form-field:nth-of-type(3) {
-  position: relative;
+  .form-input:focus ~ &,
+  .form-input:hover ~ &,
+  &:hover {
+    fill: #188ce8;
+  }
 }
 
 .icon-mail {
@@ -232,12 +239,12 @@ textarea::placeholder {
   left: 15px;
   bottom: 14px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.form-input:focus ~ .icon-mail,
-.form-input:hover ~ .icon-mail,
-.icon-mail:hover {
-  fill: #188ce8;
+  .form-input:focus ~ &,
+  .form-input:hover ~ &,
+  &:hover {
+    fill: #188ce8;
+  }
 }
 
 input:focus-visible,
@@ -268,6 +275,11 @@ textarea:focus-visible {
   border-style: none;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
 
 .test {
@@ -291,40 +303,23 @@ textarea:focus-visible {
   height: 24px;
 }
 
-.form-input-btn-email:hover,
-.form-input-btn-email:focus {
-  background-color: #188ce8;
-}
-
-/*--ФОРМ ФИЛД ОБЩИЙ--*/
-
-.form-field {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-/*--Отвечает за квадратик слева, а текст справа--*/
-
-.form-field:nth-of-type(5) {
-  margin-bottom: 0px;
-  align-items: center;
-}
-
 /*ШРИФТЫ И РАЗМЕР ЛЕЙБЛА */
+
 .label-policy {
+  display: flex;
+  align-items: center;
+  position: relative;
   /*шрифты в лейбле*/
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0px;
 
   color: #757575;
-}
 
-.label-policy a {
-  /*шрифты в лейбле, где ссылка*/
-  color: #2196f3;
+  & a {
+    /*шрифты в лейбле, где ссылка*/
+    color: #2196f3;
+  }
 }
 
 /*------САМ ЧЕК БОКС ОТРАБАТЫВАЕМ----*/
@@ -334,17 +329,15 @@ textarea:focus-visible {
   appearance: none;
 }
 
-.label-policy {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
 .icon-icon-check {
   display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 9px;
+
+  .checkbox:checked ~ & {
+    visibility: hidden;
+  }
 }
 
 .icon-icon-checked {
@@ -355,13 +348,8 @@ textarea:focus-visible {
   height: 15px;
   margin-right: 9px;
   visibility: hidden;
-}
 
-.checkbox:checked + .icon-icon-checked {
-  visibility: visible;
+  .checkbox:checked + & {
+    visibility: visible;
+  }
 }
-
-.checkbox:checked ~ .icon-icon-check {
-  visibility: hidden;
-}
-

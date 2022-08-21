@@ -37,12 +37,13 @@
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $link-contacts-hover-accent;
+  }
 }
 
-.footer-address-link:hover,
-.footer-address-link:focus {
-  color: $link-contacts-hover-accent;
-}
 .direction {
   display: flex;
   align-items: baseline;
@@ -81,16 +82,17 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $link-hover-accent;
+  }
 }
 .webstudio-social-icon {
   display: block;
   width: 20px;
   height: 20px;
   fill: $button-filter-hover-accent;
-}
-.webstudio-socials-list-link:hover,
-.webstudio-socials-list-link:focus {
-  background: $link-hover-accent;
 }
 
 .footer-email {
@@ -121,23 +123,23 @@
 .footer-email-input {
   display: flex;
   gap: 12px;
-}
 
-.footer-email-input input {
-  padding: 15px 16px;
-  min-width: 358px;
+  & input {
+    padding: 15px 16px;
+    min-width: 358px;
 
-  font-size: 16px;
-  line-height: 20px;
+    font-size: 16px;
+    line-height: 20px;
 
-  color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .footer-email-input input:hover {
