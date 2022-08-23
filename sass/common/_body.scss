@@ -82,7 +82,7 @@ body {
 
 /*--------------------------------------------1стр ОСОБЕННОСТИ SPECIALS--------------------------------------------*/
 
-.section-specials-list {
+.section-specials__list {
   list-style: none;
 
   display: flex;
@@ -92,7 +92,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.section-specials-item {
+.section-specials__item {
   width: 270px;
 
   &::before {
@@ -118,7 +118,7 @@ body {
   background-image: url(../images/astronaut1.svg);
 }
 
-.section-specials-item-title {
+.section-specials__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -129,7 +129,7 @@ body {
   margin-top: 30px;
   padding: 0;
 }
-.section-specials-item-description {
+.section-specials__description {
   font-size: 14px;
   line-height: 24px;
 
@@ -145,7 +145,7 @@ body {
   padding-top: 0px;
 }
 
-.section-tasks-title {
+.section-tasks__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -154,7 +154,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.section-tasks-list {
+.section-tasks__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -165,15 +165,15 @@ body {
   margin-bottom: 0;
   padding: 0;
 }
-.section-tasks-item {
+.section-tasks__item {
   position: relative;
 }
 
-.section-tasks-item-img {
+.section-tasks__item-img {
   display: block;
 }
 
-.section-tasks-item-img-overlay {
+.section-tasks__item-img-overlay {
   background: rgba(47, 48, 58, 0.8);
   position: absolute;
   width: 100%;
